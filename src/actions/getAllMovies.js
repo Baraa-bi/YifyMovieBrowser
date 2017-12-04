@@ -26,7 +26,7 @@ import { invalidRequest , checkPagesEnd} from './commonActions';
       dispatch({ type: FETCHING_MOVIES, payload: true });
     
       axios
-        .get(GET_ALL_MOVIES(cupagerrentPage))
+        .get(GET_ALL_MOVIES(currentPage))
         .then(function(response) {
 
           dispatch({type: MOVIES_CURRENT_PAGE,payload: getState().movies.currentPage + 1});
